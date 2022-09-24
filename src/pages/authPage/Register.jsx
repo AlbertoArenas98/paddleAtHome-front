@@ -24,7 +24,7 @@ function AuthPage() {
     return (
         <div className="authpage-container">
             <form className="authpage-container_form" onSubmit={handleSubmit(onSubmit)}>
-                <h1>E-Commerce</h1>
+                <h1>Register</h1>
                 <label htmlFor="">Email</label>
                 <input placeholder="lucho@gmail.com"  {...register("email")} />
 
