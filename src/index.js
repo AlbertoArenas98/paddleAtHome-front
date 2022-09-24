@@ -6,6 +6,7 @@ import Context from "./store";
 import App from './App';
 import Login from './pages/authPage/Login'
 import Register from './pages/authPage/Register'
+import Home from './pages/homePage/Home'
 
 
 
@@ -20,9 +21,13 @@ const Container = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<App />} >
-          </Route>
-          <Route path="/login" element={<Login />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+          </Route>
+     
+          
+
         </Routes>
       </BrowserRouter>
     </Context.Provider>

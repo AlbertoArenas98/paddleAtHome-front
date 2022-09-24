@@ -14,6 +14,7 @@ const Navbar = () => {
         <p>Profile</p>
         <p><Link to="/register">Register</Link></p>
         <p><Link to = "./login">Login</Link></p>
+        <p><Link to = "./home">Home</Link></p>
       </div>
     </nav>
   );
