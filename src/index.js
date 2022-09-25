@@ -7,6 +7,8 @@ import App from './App';
 import Login from './pages/authPage/Login'
 import Register from './pages/authPage/Register'
 import Home from './pages/homePage/Home'
+import Profile from './pages/profilePage/Profile';
+import PathNotFound from './pages/pathNotFound/PathNotFound';
 
 
 
@@ -21,13 +23,13 @@ const Container = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<App />} >
-          <Route path="/home" element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="*" element={<PathNotFound />} />
+
+          </Route>
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
-          </Route>
-     
-          
-
         </Routes>
       </BrowserRouter>
     </Context.Provider>

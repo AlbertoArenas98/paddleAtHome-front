@@ -1,0 +1,15 @@
+
+.pathNotFound{
+    padding-top: 260px;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+
+    h2{
+        font-size:100px;
+        color: rgb(0, 255, 0);
+    }
+}
