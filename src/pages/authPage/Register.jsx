@@ -34,14 +34,19 @@ function AuthPage() {
                 <label htmlFor="">FirstName</label>
                 <input placeholder="FirstName"  {...register("first_name")} />
 
-                <label htmlFor="">Address</label>
-                <input placeholder="Address"  {...register("address")} />
+                <label htmlFor="">City</label>
+                <input placeholder="Cities"  {...register("cities")} />
 
-                <select {...register("role")}>
-                    <option value="client">Client</option>
-                    <option value="client_vip">Client Vip</option>
-                    <option value="vendor">Vendor</option>
-                </select>
+                
+                <label htmlFor="">Group Type</label>
+                <input placeholder="group_type"  {...register("group_type")} />
+
+                <label htmlFor="">Day Time</label>
+                <input placeholder="day_time"  {...register("day_time")} />
+
+                <label htmlFor="">Level</label>
+                <input placeholder="levels"  {...register("levels")} />
+                
 
                 <input type="submit" className="form_button" />
             </form>
