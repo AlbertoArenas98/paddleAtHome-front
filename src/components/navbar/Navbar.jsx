@@ -11,6 +11,7 @@ const Navbar = () => {
         <img src={logo} alt="" />
       </div>
       <div className="menu">
+        <p><Link to="/">Home</Link></p>
         <p><Link to="/register">Register</Link></p>
         <p><Link to="/login">Login</Link></p>
         <p><Link to="/profile">Profile</Link></p>
