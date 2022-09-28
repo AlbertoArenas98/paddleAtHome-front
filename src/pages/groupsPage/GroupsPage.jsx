@@ -24,12 +24,11 @@ export default function Groups() {
     //     getGroups();
     // },[]);
 
-    function paintNameGroups () {
-        return groups.map(({group, city, type, time, level}) => {
+    function paintNameGroups() {
+        return groups.map(({ group, city, type, time, level }) => {
             return (
                 <div>
-                    <h2>
-                        {group}
+                    <h2>{group}
                     </h2>
                     <p>City: {city}</p>
                     <p>Type: {type}</p>
@@ -43,17 +42,18 @@ export default function Groups() {
 
     return (
 
-        <div className="profilePage">
-            <form className="authpage-container_form">
+        <div className="groupPage">
+            <div className="groupPage_form">
                 <img src={img} alt="" />
                 <h1>Hello {user.first_name}</h1>
-                <div><p>These are our padel groups</p></div>
+                <br />
+                <p>These are our padel groups</p>
                 <br />
                 {paintNameGroups()}
 
                 <br />
-                <p>If your are interested in joining eny of them, please contact us!</p>
-            </form>
+                <p>If your are interested in joining any of them, please contact us!</p>
+            </div>
 
         </div >
     );
