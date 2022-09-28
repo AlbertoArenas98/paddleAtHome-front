@@ -3,24 +3,43 @@ import img from "../../assets/Logo con tipografía circular para servicios fotó
 import { useGetter } from "../../store";
 import { useGroups } from "../../hooks";
 import { useEffect } from "react";
-import axios from "axios";
-import { useState } from "react";
 
 export default function Groups() {
 
     const { user } = useGetter();
 
-    const [groups, setGroups] = useState();
+    const [groups, getAll] = useGroups();
 
     useEffect(() => {
-        const getGroups = async() => {
-            const groups = await axios.get('http://localhost:3000/group-class/get-all')
-            setGroups(groups.data.data)
-        }
-        getGroups();
-    },[]);
+        getAll();
+    }, [])
 
-    console.log(groups)
+    // const [groups, setGroups] = useState();
+
+    // useEffect(() => {
+    //     const getGroups = async() => {
+    //         const groups = await axios.get('http://localhost:3000/group-class/get-all')
+    //         setGroups(groups.data.data)
+    //     }
+    //     getGroups();
+    // },[]);
+
+    function paintNameGroups () {
+        return groups.map(({group, city, type, time, level}) => {
+            return (
+                <div>
+                    <h2>
+                        {group}
+                    </h2>
+                    <p>City: {city}</p>
+                    <p>Type: {type}</p>
+                    <p>Time: {time}</p>
+                    <p>Level: {level}</p>
+                    <br />
+                </div>
+            )
+        });
+    }
 
     return (
 
@@ -30,12 +49,12 @@ export default function Groups() {
                 <h1>Hello {user.first_name}</h1>
                 <div><p>These are our padel groups</p></div>
                 <br />
-                <label htmlFor="">City:</label>
-                <label htmlFor="">Group type: </label>
-                <label htmlFor="">Day time: </label>
-                <label htmlFor="">Level: </label>
+                {paintNameGroups()}
 
+                <br />
+                <p>If your are interested in joining eny of them, please contact us!</p>
             </form>
-        </div>
+
+        </div >
     );
 };
